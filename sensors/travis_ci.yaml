@@ -1,0 +1,4 @@
+platform: travisci
+api_key: !secret travis_ci_api_key
+repository:
+  - nebulab/helen
