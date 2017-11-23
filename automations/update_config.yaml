@@ -1,0 +1,12 @@
+alias: 'Update config if travis build is successfull'
+trigger:
+  platform: state
+  entity_id: sensor.nebulabhelen_last_build_id 
+condition:
+  - condition: state
+    entity_id: sensor.nebulabhelen_last_build_state
+    state: 'passed'
+action:
+  - service: hassio.addon_restart
+    data:
+      addon: "core_git_pull"
