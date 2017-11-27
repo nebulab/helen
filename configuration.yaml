@@ -12,6 +12,8 @@ homeassistant:
   time_zone: Europe/Rome
   # Customization file
   customize: !include customize.yaml
+  
+hassio:
 
 # Show links to resources in log and frontend
 introduction:
